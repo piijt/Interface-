@@ -17,6 +17,14 @@ class GolfBall implements Sellable {
         $this->_noinstock += $numItems;
     }
 
+    public function getIndents() {
+      return $this->indents;
+    }
+
+  public function setIndents( $no ) {
+      $this->indents = $no;
+    }
+
     public function sellItem() {
         $returnVal = false;
         if ( $this->_noinstock > 0 ) {
